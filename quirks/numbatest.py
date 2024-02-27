@@ -24,7 +24,14 @@ def go_fast_np(a):
     return a + np.tanh(np.diag(a)).sum()
 
 if __name__ == "__main__":
-    print('Method 1', measure_time(lambda: go_slow_np(x)))
-    print('Method 2', measure_time(lambda: go_fast_np(x)))
-    print('Method 3', measure_time(lambda: go_fast(x)))
+    print('Method 1', measure_time(lambda: go_slow_np(x), 1000))
+    print('Method 2', measure_time(lambda: go_fast_np(x), 1000))
+    print('Method 3', measure_time(lambda: go_fast(x), 1000))
+
+# from timeit import timeit
+
+# print(timeit('go_slow_np(x)', number=1000, globals=globals()))
+# print(timeit('go_fast_np(x)', number=1000, globals=globals()))
+# print(timeit('go_fast(x)', number=1000, globals=globals()))
+
     
