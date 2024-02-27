@@ -1,3 +1,7 @@
+########################
+# A Program to create progress bar for parallel program
+########################
+
 import multiprocessing as mp
 import tqdm
 from time import sleep
